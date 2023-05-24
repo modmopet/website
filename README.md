@@ -5,7 +5,7 @@ The official website of the ModMopet mod manager.
 To begin development the following steps are required.
 
 #### Once cloned down install dependencies.
->NOTE: For this example Yarn is being used in place of node. If you wish to use node simply replace the yarn commands with node alternatives. 
+>NOTE: For this example Yarn is being used in place of npm. If you wish to use npm simply replace the yarn commands with npm alternatives. 
 ```bash
 yarn install 
 ```
