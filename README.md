@@ -27,7 +27,8 @@ yarn preview
 ### Helpers 
 #### Source Control 
 For source control git the current toolset that is being leveraged. With that a commit formatter has also been added for development aid. 
->NOTE: This formatting tool will take you through an interactive prompt to ensure commits are commented and organized properly. 
+>NOTE: This formatting tool will take you through an interactive prompt to ensure commits are commented and organized properly.
+> 
 > ![interactive commit example](./assets/docs/commit.png)
 
 ```bash
