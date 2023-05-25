@@ -1,7 +1,55 @@
-import { CodeBlock } from "@ui";
+import {useEffect, useState} from "react";
+import { CodeBlock, Input } from "@ui";
+import fields from "../../config/config_fields.json";
 
 function ConfigurationForm() {
-  return <div style={{ maxWidth: "700px", margin: "0 auto"  }}>
+  const generateState = () => {
+    const state = {};
+    for (const field of fields) {
+      state[field.name] = "";
+    }
+    return state;
+  };
+
+  const [ymlFields, setYmlFields] = useState(generateState());
+
+  useEffect(function(){
+    console.log(ymlFields);
+  },[ymlFields]);
+
+  const generateInputs = () => {
+        return fields.map((field) => {
+          return <Input
+                    key={field.name}
+                    field={field}
+                    handleChange={e => {
+                        const newFieldData = {
+                          ...ymlFields,
+                          [field.name]: e.target.value
+                        }
+                          setYmlFields(newFieldData);
+                     }
+                    }
+                  />;
+        });
+  };
+
+  const generateContent = () => {
+    let output = ``;
+    for (const key in ymlFields) {
+      output += `${key}: ${ymlFields[key]}\n`;
+    }
+    return output;
+  };
+
+  return <div style={{ maxWidth: "1000px", margin: "0 auto", padding: "20px", backgroundColor: "#282c34", borderRadius: "10px", display: "flex"  }}>
+    <div
+      style={{
+        padding: "0 20px"
+      }}
+    >
+      {generateInputs()}
+    </div>
     <CodeBlock
       rounded
       dark
@@ -14,7 +62,7 @@ function ConfigurationForm() {
         numbered
         start={1}
         copy
-        content={`id: 785773fd-1938-42f0-8a51-b4a6e282203e\ntitle: DynamicFPS\ndescription: A mod for upscaling to 1080p internally\nversion: 1.42.0\ntype: 3\ngameVersion:\n  - 1.1.0\nauthorName: ChucksFeedAndSeed\nauthorLink: https://www.reddit.com/user/ChucksFeedAndSeed/`}
+        content={generateContent()}
       />
     </CodeBlock>
   </div>
