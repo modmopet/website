@@ -1,0 +1,42 @@
+[
+  {
+    "name": "id",
+    "type": "string",
+    "valueNewLine": false
+  },
+  {
+    "name": "title",
+    "type": "string",
+    "valueNewLine": false
+  },
+  {
+    "name": "description",
+    "type": "string",
+    "valueNewLine": false
+  },
+  {
+    "name": "version",
+    "type": "string",
+    "valueNewLine": false
+  },
+  {
+    "name": "type",
+    "type": "number",
+    "valueNewLine": false
+  },
+  {
+    "name": "gameVersion",
+    "type": "string",
+    "valueNewLine": true
+  },
+  {
+    "name": "authorName",
+    "type": "string",
+    "valueNewLine": false
+  },
+  {
+    "name": "authorLink",
+    "type": "string",
+    "valueNewLine": false
+  }
+]
