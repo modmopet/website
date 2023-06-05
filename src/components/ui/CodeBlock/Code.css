@@ -12,6 +12,7 @@
   width: 99%;
   margin-top: 1em;
   font-family: 'JetBrains Mono';
+  height: min-content;
 }
 
 code {

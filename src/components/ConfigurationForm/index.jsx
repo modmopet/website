@@ -13,10 +13,6 @@ function ConfigurationForm() {
 
   const [ymlFields, setYmlFields] = useState(generateState());
 
-  useEffect(function(){
-    console.log(ymlFields);
-  },[ymlFields]);
-
   const generateInputs = () => {
         return fields.map((field) => {
           return <Input
@@ -42,14 +38,43 @@ function ConfigurationForm() {
     return output;
   };
 
-  return <div style={{ maxWidth: "1000px", margin: "0 auto", padding: "20px", backgroundColor: "#282c34", borderRadius: "10px", display: "flex"  }}>
-    <div
+  const handleFormSubmit = e => {
+    e.preventDefault();
+  }
+
+  return <div style={{
+    maxWidth: "1000px",
+    margin: "0 auto",
+    padding: "20px",
+    backgroundColor: "#282c34",
+    borderRadius: "10px",
+    display: "flex",
+    boxShadow: "0px 3px 18px -2px rgba(0, 0, 0, 0.46)"
+  }}>
+    <form
+      onSubmit={handleFormSubmit}
       style={{
-        padding: "0 20px"
+        padding: "0 20px",
+        display: "grid"
       }}
     >
       {generateInputs()}
-    </div>
+      <button
+        type="submit"
+        style={{
+          padding: "10px",
+          margin: "10px 0",
+          border: "none",
+          borderRadius: "5px",
+          backgroundColor: "#80cbc4",
+          color: "white",
+          fontFamily: 'JetBrains Mono',
+          fontWeight: "bold"
+        }}
+      >
+        Generate Yaml File
+      </button>
+    </form>
     <CodeBlock
       rounded
       dark
