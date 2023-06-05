@@ -38,7 +38,8 @@ function Input({field, handleChange}) {
                     backgroundColor: "transparent",
                     color: "white",
                     fontFamily: 'JetBrains Mono',
-                    resize: "none"
+                    resize: "none",
+                    width: "100%"
                   }}
                 ></textarea>);
       case "dropdown":
