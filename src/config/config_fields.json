@@ -1,42 +1,76 @@
 [
   {
     "name": "id",
-    "type": "string",
-    "valueNewLine": false
+    "label": "Id",
+    "placeholder": "sdfadf98798afadfa89d7f8dfadf",
+    "type": "text",
+    "valueNewLine": false,
+    "required": true
   },
   {
     "name": "title",
-    "type": "string",
-    "valueNewLine": false
+    "label": "Title",
+    "placeholder": "Super Cool Mod",
+    "type": "text",
+    "valueNewLine": false,
+    "required": true
   },
   {
     "name": "description",
-    "type": "string",
-    "valueNewLine": false
+    "label": "Description",
+    "placeholder": "Description of your mod.",
+    "type": "textarea",
+    "valueNewLine": false,
+    "required": true
   },
   {
     "name": "version",
-    "type": "string",
-    "valueNewLine": false
+    "label": "Version Number",
+    "placeholder": "XX.XX.XX",
+    "type": "text",
+    "valueNewLine": false,
+    "required": true
   },
   {
     "name": "type",
-    "type": "number",
-    "valueNewLine": false
+    "label": "Category",
+    "placeholder": "Select a category.",
+    "type": "dropdown",
+    "options": [
+      {
+        "value": "3",
+        "title": "Performance"
+      },
+      {
+        "value": "4",
+        "title": "Graphics"
+      }
+    ],
+    "valueNewLine": false,
+    "required": true
   },
   {
     "name": "gameVersion",
-    "type": "string",
-    "valueNewLine": true
+    "label": "Compatible Game Versions",
+    "placeholder": "XX.XX.XX,XX.XX.XX",
+    "type": "text",
+    "valueNewLine": true,
+    "required": true
   },
   {
     "name": "authorName",
-    "type": "string",
-    "valueNewLine": false
+    "label": "Author Name",
+    "placeholder": "Awesome Modder",
+    "type": "text",
+    "valueNewLine": false,
+    "required": true
   },
   {
     "name": "authorLink",
-    "type": "string",
-    "valueNewLine": false
+    "label": "Link to Author",
+    "placeholder": "https://",
+    "type": "text",
+    "valueNewLine": false,
+    "required": true
   }
 ]
